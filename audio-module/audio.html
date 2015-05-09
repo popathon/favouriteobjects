@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title>Popathon</title>
+
+	<style>
+  	
+   	#hotspot {
+    	width: 20em;
+    	height: 20em;
+    	
+    	background: #FF4136;
+    	
+    	cursor: pointer;
+  	}
+  	#hotspot:hover {
+    	
+    	background: #2ECC40;
+  	}
+  	
+  	#beep {
+    	visibility: hidden;
+  	}
+
+	</style>
+
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+</head>
+<body>
+
+
+<div id="hotspot"></div>
+
+
+<audio id="beep" preload="auto" loop="true">
+  <source src="beep.mp3">
+</audio>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+
+var beep = $("#beep")[0];
+$("#hotspot").mouseenter(function() {
+  beep.play();
+}).mouseleave(function() {
+  beep.pause();
+  beep.currentTime = 0;
+});
+
+</script>
+
+
+</body>
+</html>
