@@ -1,0 +1,3 @@
+[submodule "vendor/threex.domevents"]
+	path = vendor/threex.domevents
+	url = https://github.com/jeromeetienne/threex.domevents.git
